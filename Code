@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define M 100
+#define N 30
+
+char names[M][N];
+// M is the maximum number of inputs,and N is maximum number of characters of each input
+void ordena(int m){
+    // m is an integer that is given by the user,it measures the quantity of strings that the user is inputing
+    int x,y,r;
+    char aux[N];
+    for(int x = 0;x < m;x++){
+        for(int y = x+1;y < m;y++){
+            r = strcmp(names[x],names[y]);
+            if(r > 0){
+                strcpy(aux,names[x]);
+                strcpy(names[x],names[y]);
+                strcpy(names[y],aux);
+            }
+        }
+    }
+}

@@ -1,1 +1,1 @@
-# Bubble-sorte-in-C
+# Bubble-sort-in-C
